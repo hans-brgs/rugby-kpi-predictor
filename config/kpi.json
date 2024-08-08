@@ -1,0 +1,60 @@
+{
+	"descriptive" : ["matchEspnId", "matchName", "season", "matchDate","teamName", "opponentTeamName", "isHome", "teamScore", "opponentTeamScore"],
+	"general" :
+	{
+		"play" : {
+			"general" : ["passes", "offload", "cleanBreaks", "defendersBeaten"],
+			"carries": ["runs", "carriesMetres"],
+			"kicks": ["kickFromHandMetres", "totalFreeKicksConceded"],
+			"rucks": ["rucksLost", "rucksWon"],
+			"mauls": ["maulsWon", "maulsLost", "maulingMetres"],
+			"turnovers": ["turnoverWon", "turnoversConceded"],
+			"ball_collection" : ["collectionFailed", "collectionSuccess"]
+		},
+		"defensive" : {
+			"tackles": ["tackleSuccess", "missedTackles"]
+		},
+		"set_piece" : {
+			"scrums": ["scrumsWon", "scrumsLost"],
+			"lineouts": ["lineoutsWon", "lineoutsLost"]
+		},
+		"discipline": {
+			"cards": ["redCards", "yellowCards"],
+    		"penalties": ["penaltiesConceded"]
+		}
+	},
+
+	"detailled" :
+	{
+		"play" : {
+			"carries": ["carriesCrossedGainLine", "carriesNotMadeGainLine", "carriesSupport"],
+    		"kicks": ["kickPossessionLost", "kickPossessionRetained", "kickTouchInGoal", "kickPenaltyBad", "kickPenaltyGood",
+              "pcKickPercent", "penaltyKickForTouchMetres", "freeKickConcededAtScrum", "freeKickConcededInGeneralPlay", 
+              "freeKickConcededInRuckOrMaul"],
+    		"ball_collection": ["collectionFromKick", "collectionInterception", "collectionLooseBall"],
+			"rucks": ["rucksTotal", "ruckSuccess"],
+    		"mauls": ["maulsTotal", "maulsWonOutright", "maulsLostOutright", "maulsWonPenalty", "maulsLostTurnover", "maulsWonPenaltyTry", "maulsWonTry"],
+    		"turnovers": ["turnoverOppHalf", "turnoverOwnHalf","turnoverLostInRuckOrMaul", "turnoverKnockOn", "turnoverForwardPass", "turnoverCarriedInTouch",
+                         "turnoverCarriedOver", "turnoverKickError", "turnoverBadPass"],
+			"ball_won_zones": ["ballWonZoneA", "ballWonZoneB", "ballWonZoneC", "ballWonZoneD"]
+		},
+		"set_piece" : {
+			"scrums": ["scrumsTotal", "scrumsSuccess", "scrumsWonFreeKick", "scrumsWonOutright", "scrumsWonPenalty", "scrumsWonPenaltyTry", "scrumsWonPushoverTry",
+                      "scrumsLostFreeKick", "scrumsLostOutright", "scrumsLostPenalty", "scrumsLostReversed", "scrumsReset"],
+    		"lineouts": ["lineoutSuccess", "lineoutsToOppPlayer", "lineoutsInfringeOpp", "lineoutThrowWonClean", "lineoutThrowWonPenalty", "lineoutThrowWonTap",
+                        "lineoutThrowLostFreeKick", "lineoutThrowLostHandlingError", "lineoutThrowLostNotStraight", "lineoutThrowLostOutright",
+                        "lineoutThrowLostPenalty", "lineoutsToOwnPlayer", "lineoutThrowNotStraight", "lineoutWonOwnThrow", "lineoutWonSteal"]
+		},
+		"discipline": {
+			"penalties": ["penaltyConcededCollapsingMaul", "penaltyConcededCollapsingOffense", "penaltyConcededCollapsing",
+                  "penaltyConcededDelibKnockOn", "penaltyConcededDissent", "penaltyConcededEarlyTackle", "penaltyConcededFoulPlay",
+                  "penaltyConcededHandlingInRuck", "penaltyConcededHighTackle", "penaltyConcededKillingRuck", "penaltyConcededLineoutOffence",
+                  "penaltyConcededObstruction", "penaltyConcededOffside", "penaltyConcededOppHalf", "penaltyConcededOther", "penaltyConcededOwnHalf",
+                  "penaltyConcededScrumOffence", "penaltyConcededStamping", "penaltyConcededWrongSide"]
+		},
+		"play_control": {
+			"possession": ["pcPossessionFirst", "pcPossessionSecond", "ballPossessionLast10Mins"],
+    		"territory": ["pcTerritoryFirst", "pcTerritorySecond", "territoryLast10Mins"]
+		}
+	}
+}

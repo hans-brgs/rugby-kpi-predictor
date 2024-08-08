@@ -1,0 +1,8 @@
+{
+    "host": "localhost",
+    "user": "admin",
+    "password": "admin",
+    "database": "rugby_db",
+    "port": 3306,  
+    "charset": "utf8mb4"
+}

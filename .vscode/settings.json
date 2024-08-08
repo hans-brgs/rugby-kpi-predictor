@@ -1,0 +1,7 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"notebook.defaultFormatter": "esbenp.prettier-vscode",
+	"header.email": "hans95.bourgeois@gmail.com",
+	"header.username": "Myosin",
+	"header.entreprise": "None"
+}
