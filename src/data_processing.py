@@ -11,9 +11,11 @@
 
 import pandas as pd
 import numpy as np
+import pingouin as pg
 
 from typing import Dict, Any, List
 from decimal import Decimal
+from scipy import stats
 
 
 def exclude_playoff(df : pd) -> pd :
@@ -136,3 +138,32 @@ def get_predicted_matches(row, df, selected_features, descriptive_features, n_ma
     # Concatenate descriptive data and calculated features
     predicted_match = pd.concat([descriptive_df, features_df])
     return predicted_match
+
+def multiple_ttest(dependent_variables, a, b):
+
+    def stars(p_value):
+        if 0.01 <= p_value < 0.05 :
+            return "*"
+        if 0.001 <= p_value < 0.01 :
+            return "**"
+        if p_value < 0.001 :
+            return "***"
+        return ""
+
+    stat_results = []
+    for dependent_variable in dependent_variables:
+        # Compute t-test on each dependent variable
+        TtestResult = stats.ttest_rel(a[dependent_variable], b[dependent_variable])
+        # Compuite Effect Size
+        cohen_d = pg.compute_effsize(a[dependent_variable], b[dependent_variable], paired=True)
+        # Create dictionnary 
+        stat_results.append({
+            'kpi': dependent_variable,
+            'df': TtestResult.df,
+            'P-value': TtestResult.pvalue,
+            'p-stars': stars(TtestResult.pvalue),
+            'cohen_d': cohen_d
+        })
+
+    results_df = pd.DataFrame(stat_results)
+    return results_df
