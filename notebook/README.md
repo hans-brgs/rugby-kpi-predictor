@@ -1,4 +1,4 @@
-# Abstract
+# Abstract : Impact of Key Performance Indicators and Home Advantage on Match Outcomes in Top 14 Rugby: A Data-Driven Analysis Using Machine Learning
 
 ## Objectives:
 This study aimed to: i) identify key performance indicators (KPIs) associated with match outcomes in the French Top 14 rugby competition; ii) evaluate the effectiveness of a reduced set of KPIs in predicting match results; and iii) examine the impact of home advantage on both model performance and individual KPIs.

@@ -1,4 +1,4 @@
-# Top 14 Rugby Performance Analysis
+# Impact of Key Performance Indicators and Home Advantage on Match Outcomes in Top 14 Rugby: A Data-Driven Analysis Using Machine Learning
 ## About The Project
 This project analyzes key performance indicators (KPIs) in the French Top 14 rugby competition. It aims to identify the most significant predictors of match outcomes, evaluate the effectiveness of a reduced set of KPIs, and examine the impact of home advantage on both model performance and individual KPIs.
 The analysis is based on data from 1,085 unique matches played between 2017 and 2023, using relative performance metrics and machine learning techniques.
